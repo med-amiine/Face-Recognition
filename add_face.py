@@ -26,8 +26,7 @@ def show_window():
 def mongodb_con(pic_nb,info):
     print("connecting to database...")
     client = pymongo.MongoClient(
-        "mongodb://m001-student:Password@cluster0-shard-00-00.nvnbz.mongodb.net:27017/Positive?ssl=true&replicaSet"
-        "=atlas-qi9ptr-shard-0&authSource=admin&retryWrites=true&w=majority")  # open connection to mongo db to save
+        "mongodb://")  # open connection to mongo db to save
     # face to database
     face_database = client[info[0]]  # select database
     faces_collection = face_database[info[1]]  # select collection
